@@ -6,7 +6,7 @@ for k, v in pairs(Config.Items) do
 	item_prices[v.item] = v.price
 end
 
-RegisterNetEvent("esx_purchaseammo:Buy", item)
+RegisterServerEvent("esx_purchaseammo:Buy", item)
 AddEventHandler("esx_purchaseammo:Buy", function(item)
 	local xPlayer = ESX.GetPlayerFromId(source)
 	if xPlayer.hasWeapon(item) then -- Checks to ensure the player has that item
